@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/stylediy.css">
+    <title>Dutch DIY Smart home Things</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/7a62bf2452.js" crossorigin="anonymous"></script>
+
+    <!--Navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <img src="/img/logo.png" width="50" height="50">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="navbar-brand mb-0 h1">Dutch DIY Smart home Things</span>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/knowledgebase.html">Knowledgebase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/diy.html">DIY</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="container">
+            <div class="clearfix">
+                &nbsp;
+            </div>
+
+            <div class="clearfix">
+                <h1>Installatie:</h1>
+            </div>
+
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Algemene informatie / tips</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Als je een shield met Wemos of ESP-01 aansluit, komt er een Wifi-netwerk
+                                        beschkbaar: P1-Monitor, P1-Mini, P1-Verwarming, Itho-control of ESP_Easy</li>
+                                    <li>Het standaardwachtwoord van ESPEasy / ESPHome als de Wemos als AP functioneert
+                                        is: '<b><i>espsetup</i></b>'</li>
+                                    <li>Als er geen pagina opent, ga dan naar http://192.168.4.1 en selecteer je eigen
+                                        wifi netwerk en voer je wachtwoord in.</li>
+                                    <li>Kijk vervolgens in je router of modem of gebruik een app op uw smartphone om te
+                                        zien welk IP-adres je Wemos lokaal
+                                        gekregen heeft.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">P1 shield: </h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Alleen bij DSMR5 meters is het mogelijk om de voeding van de slimme meter te
+                                        gebruiken. Bij andere meters kun je het best de Wemos voeden via USB. Verwijder
+                                        dan ook de jumper bij '5V'</li>
+                                    <li>Om te kijken of de telegrammen van de slimme meter doorkomen, kun je met telnet
+                                        naar de Wemos verbinden: 'telnet [ip-adres] [poort]' (De standaardpoort is 8088)
+                                    </li>
+                                    <li>Sommige meters hebben geen pull-up weerstand nodig, verwijder dan de jumper bij
+                                        'pull-up' op de printplaat</li>
+                                    <li>Niet alle meters hebben dezelfde baudrate en andere instellingen, kijk op <a
+                                            href="http://domoticx.com/p1-poort-slimme-meter-hardware/">deze site</a>
+                                        voor een lijst met veelgebruikte meters en hun instellingen</li>
+                                    <li>We hebben van veel verschillende merken en types gehoord dat het werkt, o.a.
+                                        Iskra,
+                                        Kaifa, Landis+Gyr, ZIV en Sagemcom. Er is geen specifiek type meter bij ons
+                                        bekend waar het niet mee werkt.</li>
+                                    <li>Ook Belgische meters worden ondersteunt, wanneer deze de (E)SMR/(D)SMR-standaard
+                                        gebruiken. Onder andere meters van Siconia en Fluvius worden ondersteund.</li>
+                                </ul>
+
+                                <h5>Integratie met Domotica-applicaties:</h5>
+                                <ul>
+                                    <li>In <a href="https://www.domoticz.com">Domoticz</a> gebruik je de 'P1 Smart Meter
+                                        with LAN interface' type in de hardware tab. Vul het ip-adres van de Wemos of de
+                                        ESP-01s in en
+                                        de poort zoals ingesteld in de P1 Gateway device op de Wemos/ESP-01s</li>
+                                    <li>In <a href="https://www.home-assistant.io/hassio/">Home Assistant</a> kun je <a
+                                            href="https://www.home-assistant.io/integrations/dsmr/">deze plugin</a>
+                                        gebruiken (en dan de ser2net configuratie), of je gebruikt ESPHome (zie onder).
+                                    </li>
+                                    <li>In <a href="https://homey.app/nl-nl/">Homey</a> is <a
+                                            href="https://homey.app/nl-nl/app/nl.joolee.homey.espeasy/ESP-Easy/">deze
+                                            ESPEasy Homey App</a> te gebruiken. Info is te vinden in deze <a
+                                            href="https://github.com/Joolee/nl.joolee.homey.espeasy">repository</a></li>
+                                    <li>In <a href="https://dsmr-reader.readthedocs.io/nl/v5/intro.html">DSMR-Reader</a>
+                                        kun je de print als netwerk socket gebruiken (<a
+                                            href="https://dsmr-reader.readthedocs.io/nl/v5/installation.html#b-network-socket-env">Zie
+                                            deze configuratie</a>)</li>
+                                    <li>De telegrammen zijn met telnet ook uit te lezen: 'telnet [ip-adres] [poort]' en
+                                        je ziet de telegrammen voorbij komen. Standaardpoort is '8088'</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Software op de Wemos en ESP-01s</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>We hebben diverse config voorbeelden van ESPHome op <a
+                                            href="https://github.com/DutchDIYSmarthomethings/DIY">Github</a> staan.</li>
+                                    <li>Verder hebben we ook voorbeelden van <a
+                                            href="https://www.letscontrolit.com/wiki/index.php/ESPEasy">ESPEasy</a> op
+                                        de Wemos en ESP-01s. Zie tab pcb's voor meer informatie.</li>
+                                    <li>ESPHome is ook te gebruiken. De native <a
+                                            href="https://esphome.io/components/sensor/dsmr.html">DSMR component</a>
+                                        werkt voor de P1-Monitor en de P1-mini. De yaml moet dan (naast de
+                                        Wifi-instellingen) het volgende
+                                        bevatten:<br><br>
+                                        <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                            <div class="card-header">ESPHome</div>
+                                            <div class="card-body text-primary">
+                                                <p class="card-text">
+                                                    <pre>
+esphome:
+name: p1
+platform: ESP8266
+board: d1_mini
+
+# Disable logging
+logger:
+baud_rate: 0
+
+dsmr:
+id: dsmr_instance
+
+uart:
+- rx_pin: RX
+baud_rate: 115200
+
+sensor:
+- platform: dsmr
+energy_delivered_tariff1:
+name: Energy Consumed Tariff 1
+
+text_sensor:
+- platform: dsmr
+identification:
+name: "DSMR Identification"
+p1_version:
+name: "DSMR Version"
+</pre>
+                                            </div>
+                                    </li>
+                                    <li><a href="https://github.com/arendst/tasmota/">Tasmota</a> werkt ook samen met
+                                        de P1-Monitor en de P1-Mini. Op die manier is MQTT te gebruiken om de
+                                        telegrammen door te
+                                        sturen. Meer informatie <a
+                                            href="https://tasmota.github.io/docs/P1-Smart-Meter/">hier</a>.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-muted py-5">
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p class="mb-1">PCB &copy; Dutch DIY Smart home Things</p>
+            </div>
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <div class="icons">
+                        <a href="https://discord.me/ddiysht">
+                            <i class="fa-brands fa-discord"></i>
+                            <p>Discord</p>
+                        </a>
+                        <a href="https://github.com/dutchDIYSmarthomethings">
+                            <i class="fa-brands fa-github"></i>
+                            <p>GitHub</p>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <i class="fa-brands fa-youtube"></i>
+                            <p>YouTube</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
