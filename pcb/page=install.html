@@ -62,7 +62,8 @@
                             <p class="card-text">
                                 <ul>
                                     <li>Als je een shield met Wemos of ESP-01 aansluit, komt er een Wifi-netwerk
-                                        beschkbaar: P1-Monitor, P1-Mini, P1-Verwarming, Itho-control of ESP_Easy</li>
+                                        beschkbaar: P1-Monitor, P1-Mini, P1-Verwarming, Itho-control, P1-Water of
+                                        ESP_Easy</li>
                                     <li>Het standaardwachtwoord van ESPEasy / ESPHome als de Wemos als AP functioneert
                                         is: '<b><i>espsetup</i></b>'</li>
                                     <li>Als er geen pagina opent, ga dan naar http://192.168.4.1 en selecteer je eigen
@@ -151,7 +152,7 @@
                                             <div class="card-header">ESPHome</div>
                                             <div class="card-body text-primary">
                                                 <p class="card-text">
-                                                    <pre>
+                                                    <pre><code>
 esphome:
 name: p1
 platform: ESP8266
@@ -179,7 +180,7 @@ identification:
 name: "DSMR Identification"
 p1_version:
 name: "DSMR Version"
-</pre>
+</code></pre>
                                             </div>
                                     </li>
                                     <li><a href="https://github.com/arendst/tasmota/">Tasmota</a> werkt ook samen met
@@ -195,12 +196,6 @@ name: "DSMR Version"
             </div>
         </div>
         <footer class="text-muted py-5">
-            <div class="container">
-                <p class="float-end mb-1">
-                    <a href="#">Back to top</a>
-                </p>
-                <p class="mb-1">PCB &copy; Dutch DIY Smart home Things</p>
-            </div>
             <div class="col-md-12">
                 <div class="d-flex justify-content-center">
                     <div class="icons">
@@ -218,6 +213,25 @@ name: "DSMR Version"
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <div class="icons">
+                        <div class="buymeacoffee">
+                            <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+                                data-name="bmc-button" data-slug="DDIYSHT" data-color="#FFDD00" data-emoji="☕"
+                                data-font="Comic" data-text="Doet u ons een bak koffie in ?"
+                                data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff">
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p class="mb-1">DIY &copy; Dutch DIY Smart home Things</p>
             </div>
         </footer>
     </main>

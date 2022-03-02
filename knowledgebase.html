@@ -56,12 +56,15 @@
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#watermeter">Watermeter</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#smartHomeplatform">Smart Home Platform</a>
+                        </li>
                     </ul>
                 </div>
                 <form class="card-body tab-content">
                     <div class="tab-pane active" id="slimmemeter">
                         <h5 class="card-title">Uitlezen van de Slimmemeter</h5>
-                        <p class="card-text">Hier voor is verchillende hardware op de markt. Graag delen we onze
+                        <p class="card-text">Hier voor is verschillende hardware op de markt. Graag delen we onze
                             ervaring.<br>
                             Maakt u gebruik van een smarthome platform? Dan zou een van de volgende mogelijkheden iets
                             voor
@@ -105,30 +108,84 @@
                     </div>
                     <div class="tab-pane" id="watermeter">
                         <h5 class="card-title">Uitlezen van de Watermeter</h5>
-                        <p class="card-text">Hier voor is verchillende DIY projecten. Graag delen we onze
+                        <p class="card-text">Hier voor zijn verchillende DIY projecten. Graag delen we onze
                             ervaring:<br><br>
                             <li><a href="https://watermeterkit.nl/" class="text-decoration-none">Watermeterkit</a>
                                 <ul>
                                     <li>Met liefde handgemaakt door Dwains en RemcoVL
                                     </li>
                                 </ul>
-                            <li><a href="/pcb/page=p1.html" class="text-decoration-none">Onze eigen oplossing
-                                    (P1-Monitor of
-                                    P1-Mini)</a>
+                            <li><a href="/pcb/page=water.html" class="text-decoration-none">Onze eigen oplossing
+                                    (Watermeter DIY)</a>
                                 <ul>
-                                    <li>voor de hobbyist, Die zelf ook een beetje wil automatiseren</li>
+                                    <li>DIY watermeter. Meet ook de temperatuur en luchtvochtigheid van de ruimte
+                                        waar je watermeter zich bevind. Voor de hobbyist, Die zelf ook een beetje wil
+                                        automatiseren</li>
+                                </ul>
+                        </p>
+                    </div>
+                    <div class="tab-pane" id="smartHomeplatform">
+                        <h5 class="card-title">Verschillende smarthome platformen</h5>
+                        <p class="card-text">Hier noemen we een aantal Open Source Home Automation Platforms.<br> Zodat
+                            u
+                            rustig eens een kijkje kan
+                            nemen en een keuze kunt maken<br><br>
+                            <li><a href="https://www.home-assistant.io/" class="text-decoration-none">Home-Assistant</a>
+                                <ul>
+                                    <li>Home Assistant is een gratis en open-source software voor domotica die is
+                                        ontworpen om het centrale besturingssysteem te zijn voor slimme thuisapparaten
+                                        met de focus op lokale controle en privacy. Het kan worden benaderd
+                                        via een webgebaseerde gebruikersinterface, via begeleidende apps voor Android en
+                                        iOS, of met behulp van spraakopdrachten via een ondersteunde virtuele assistent
+                                        zoals Google Assistant en Amazon Alexa of open-source alternatieven zoals
+                                        "Almond" en "Genie" van Stanford Open Virtual Assistant Lab (Standford OVAL) aan
+                                        de Stanford University (die opties bieden om volledig on-premises te draaien
+                                        voor privacy-overwegingen).<br><br>
+
+                                        IoT-technologieën, apparaten, software, toepassingen en diensten worden
+                                        ondersteund door modulaire integratiecomponenten, die niet alleen native
+                                        integraties bevatten voor lokale connectiviteitsprotocollen zoals Bluetooth,
+                                        MQTT, Zigbee en Z-Wave, maar ook ondersteuning voor het aansturen van
+                                        propriëtaire ecosystemen als deze publieke toegang bieden via een Open API voor
+                                        integraties van derden. Nadat de Home Assistant softwaretoepassing is
+                                        geïnstalleerd als een computerapparaat zal het fungeren als een centraal
+                                        controlesysteem voor domotica (meestal aangeduid als een smart home "hub",
+                                        "brug", "gateway", "controller", "coördinator", of
+                                        "controlecentrum/centrum").<br><br>
+
+                                        Informatie van alle entiteiten die het ziet, kan worden gebruikt en bestuurd
+                                        vanuit scripts die automatiseringen in gang zetten met behulp van schema's en
+                                        "blauwdruk"-subroutines, bijvoorbeeld voor het regelen van verlichting, klimaat,
+                                        entertainmentsystemen en apparaten.
+                                    </li>
+                                </ul>
+                            <li><a href="https://www.openhab.org/" class="text-decoration-none">OpenHab</a>
+                                <ul>
+                                    <li>Open Home Automation Bus (openHAB) is een open source domoticasoftware
+                                        geschreven in Java. Het wordt op locatie ingezet en maakt verbinding met
+                                        apparaten en diensten van verschillende leveranciers. Vanaf 2019 zijn er bijna
+                                        300 bindings beschikbaar als OSGi-modules. Acties, zoals het inschakelen van
+                                        lichten, worden getriggerd door regels, spraakcommando's of bedieningselementen
+                                        op de openHAB-gebruikersinterface. Het openHAB project startte in 2010. In 2013
+                                        werd de kernfunctionaliteit een officieel project van de Eclipse Foundation
+                                        onder de naam Eclipse SmartHome. openHAB is gebaseerd op Eclipse SmartHome en
+                                        blijft het project voor de ontwikkeling van bindings. Volgens Black Duck Open
+                                        Hub wordt het ontwikkeld door een van de grootste open-source teams ter
+                                        wereld. Het heeft ook een actieve gebruikersgemeenschap.</li>
+                                </ul>
+                            <li><a href="https://domoticz.com/" class="text-decoration-none">Domoticz</a>
+                                <ul>
+                                    <li>Domoticz is een domoticasysteem waarmee u verschillende apparaten kunt
+                                        controleren en configureren, zoals: Lichten, Schakelaars, verschillende
+                                        sensoren/meters zoals Temperatuur, Regen, Wind, UV, Elektra, Gas, Water en nog
+                                        veel meer. Meldingen/waarschuwingen kunnen naar elk mobiel apparaat worden
+                                        verzonden.</li>
                                 </ul>
                         </p>
                     </div>
                 </form>
             </div>
             <footer class="text-muted py-5">
-                <div class="container">
-                    <p class="float-end mb-1">
-                        <a href="#">Back to top</a>
-                    </p>
-                    <p class="mb-1">Knowledgebase &copy; Dutch DIY Smart home Things</p>
-                </div>
                 <div class="col-md-12">
                     <div class="d-flex justify-content-center">
                         <div class="icons">
@@ -147,8 +204,27 @@
                         </div>
                     </div>
                 </div>
-        </div>
-        </footer>
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="icons">
+                            <div class="buymeacoffee">
+                                <script type="text/javascript"
+                                    src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button"
+                                    data-slug="DDIYSHT" data-color="#FFDD00" data-emoji="☕" data-font="Comic"
+                                    data-text="Doet u ons een bak koffie in ?" data-outline-color="#000000"
+                                    data-font-color="#000000" data-coffee-color="#ffffff">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="float-end mb-1">
+                        <a href="#">Back to top</a>
+                    </p>
+                    <p class="mb-1">Knowledgebase &copy; Dutch DIY Smart home Things</p>
+                </div>
+            </footer>
         </div>
     </main>
 

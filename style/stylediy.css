@@ -33,6 +33,11 @@
     background-image: linear-gradient(#fff 50%, #FF0000 50%);
 }
 
+.buymeacoffee a:nth-child(1) {
+    color: #000000;
+    background-image: linear-gradient(#fff 50%, #ff9500 50%);
+}
+
 .icons p {
     text-align: center;
     font-family: sans-serif;
@@ -42,6 +47,11 @@
 .icons a:hover {
     background-position: 0% 100%;
     color: #fff;
+}
+
+.buymeacoffee a {
+    width: 380px;
+    height: 60px;
 }
 
 body {
