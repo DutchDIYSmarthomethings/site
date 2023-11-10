@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">      
     <link rel="stylesheet" href="style/styleindex.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Dutch DIY Smart home Things</title>
 </head>
 
@@ -66,6 +66,9 @@
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="tab" href="#adblocker">Ad Blocker</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#sensoren_actuatoren">Sensoren & Actuatoren</a>
+                        </li>
                     </ul>
                 </div>
                 <form class="card-body tab-content">
@@ -104,7 +107,7 @@
                                 <ul>
                                     <li>voor de hobbyist, Die zelf ook een beetje wil automatiseren</li>
                                 </ul>
-                            <li><a href="https://www.homewizard.nl/shop/homewizard-wi-fi-p1-meter"
+                            <li><a href="https://www.homewizard.com/nl/shop/wi-fi-p1-meter/"
                                     class="text-decoration-none">HomeWizard Wi-Fi P1 Meter</a></li>
                             <ul>
                                 <li>Dit product kunt u intergreren in uw smarthome platform. Werkt
@@ -115,20 +118,56 @@
                     </div>
                     <div class="tab-pane" id="watermeter">
                         <h5 class="card-title">Uitlezen van de Watermeter</h5>
-                        <p class="card-text">Hier voor zijn verchillende DIY projecten. Graag delen we onze
-                            ervaring:<br><br>
-                            <li><a href="https://watermeterkit.nl/" class="text-decoration-none">Watermeterkit</a>
-                                <ul>
-                                    <li>Met liefde handgemaakt door Dwains en RemcoVL
-                                    </li>
-                                </ul>
-                            <li><a href="/pcb/page=water.html" class="text-decoration-none">Onze eigen oplossing
-                                    (Watermeter DIY)</a>
-                                <ul>
-                                    <li>DIY watermeter. Meet ook de temperatuur en luchtvochtigheid van de ruimte
+                        <p class="card-text">Hier voor zijn verchillende DIY/BUY projecten. Graag delen we onze
+                            ervaring:<br>
+                            <div class="container mt-3">
+                                <div id="accordion">
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                        Wi-Fi Watermeter
+                                      </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                      <div class="card-body">
+                                        De HomeWizard watermeter geeft je live inzicht in je waterverbruik. 
+                                        Zo weet je precies hoeveel water je gebruikt bij het vullen van een bad, wassen van je handen of tijdens het douchen.
+                                        Je kunt de meter zelf aansluiten: daar heb je geen professionele hulp bij nodig. 
+                                        Binnen enkele minuten ben je klaar voor gebruik en kun je beginnen met besparen op je waterrekening.
+                                        <li><a href="https://www.homewizard.com/nl/shop/wi-fi-watermeter/" class="text-decoration-none">Wi-Fi Watermeter</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                        Watermeterkit
+                                    </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                      <div class="card-body">
+                                        Met liefde handgemaakt door Dwains en RemcoVL
+                                        <li><a href="https://watermeterkit.nl/" class="text-decoration-none">Watermeterkit</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                                        Onze eigen oplossing (Watermeter DIY)
+                                      </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                                      <div class="card-body">
+                                        DIY watermeter. Meet ook de temperatuur en luchtvochtigheid van de ruimte
                                         waar je watermeter zich bevind. Voor de hobbyist, Die zelf ook een beetje wil
-                                        automatiseren</li>
-                                </ul>
+                                        automatiseren
+                                        <li><a href="/pcb/page=water.html" class="text-decoration-none">Onze eigen oplossing</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         </p>
                     </div>
                     <div class="tab-pane" id="smartHomeplatform">
@@ -188,6 +227,14 @@
                                         veel meer. Meldingen/waarschuwingen kunnen naar elk mobiel apparaat worden
                                         verzonden.</li>
                                 </ul>
+                            <li><a href="https://www.homey.app/" class="text-decoration-none">Homey</a>
+                                <ul>
+                                    <li>Homey is een smart home hub gemaakt door het Nederlandse bedrijf Athom B.V..
+
+                                        Homey heeft een mobiele en web app interface met een open API waarmee externe ontwikkelaars ondersteuning voor hun producten kunnen toevoegen aan Homey. 
+                                        Net als andere smart home hubs is het doel van Homey om te fungeren als een centraal punt voor configuratie, controle en monitoring van componenten in een smart home. 
+                                        Een automatische besturingsstroom krijgt de bijnaam "Flow" in de Homey app.</li>
+                                </ul>                                
                         </p>
                     </div>
                     <div class="tab-pane" id="adblocker">
@@ -236,6 +283,59 @@
                                         onconventionele plaatsen, zoals smart tv's en advertenties van mobiele
                                         besturingssystemen.</li>
                                 </ul>
+                        </p>
+                    </div>
+                    <div class="tab-pane" id="sensoren_actuatoren">
+                        <h5 class="card-title">Sensoren & Actuatoren</h5>
+                        <p class="card-text">Hier een selectie van sensoren en Actuaroten. Deze selectie is op basis van ervaring en positive reacties:<br>
+                            <div class="container mt-3">
+                                <div id="accordion">
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <a class="btn" data-bs-toggle="collapse" href="#collapseFour">
+                                        Sensor - Temperatuur en luchtvochtigheid
+                                      </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse show" data-bs-parent="#accordion">
+                                      <div class="card-body">
+                                        <img src="img/knlb/WSDCGQ11LM.png" class="img-thumbnail"> <br>
+                                        Zowel de Xiaomi- als de Aqara WSDCGQ11LM-sensoren presteren uitstekend. 
+                                        Ze zijn verkrijgbaar voor een redelijke prijs en leveren constante prestaties. 
+                                        Hoewel de drukwaarde niet zo bruikbaar is als je zou denken (de waarde die je krijgt van de weer-API zal waarschijnlijk dicht in de buurt komen van de waarde die je krijgt van de sensor), waren de metingen voor temperatuur en vochtigheid consistent en apparaten zijn gemakkelijk te verbergen.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFive">
+                                        Actor - Smartplug met energy monitoring
+                                    </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
+                                      <div class="card-body">
+                                        <img src="img/knlb/BlitzWolfBWSHP13.jpg" class="img-thumbnail"> <br>
+                                        Maak uw domme apparaten slim met behulp van deze Blitzwolf slimme stekker SHP13. De stekker werkt via het Zigbee 3.0 protocol en bevat een energiemeting. 
+                                        Met behulp van een hub of gateway is deze te koppelen waardoor de stekker is aan te sturen via je telefoon, of via een slimme schakelaar.
+                                        Door de compacte bouw van deze stekker is het geen enkel probleem om meerdere stekkers naast elkaar te steken.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseSix">
+                                        TEMP3
+                                      </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
+                                      <div class="card-body">
+                                        DIY watermeter. Meet ook de temperatuur en luchtvochtigheid van de ruimte
+                                        waar je watermeter zich bevind. Voor de hobbyist, Die zelf ook een beetje wil
+                                        automatiseren
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         </p>
                     </div>
                 </form>
